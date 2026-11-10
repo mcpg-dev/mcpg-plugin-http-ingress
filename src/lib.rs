@@ -405,6 +405,9 @@ mod tests {
         })
         .await;
         for _ in 0..2 {
+            // HTTP/1.1 takes the next request only once the previous one is
+            // done on the connection.
+            sender.ready().await.unwrap();
             let response = sender.send_request(post("/echo", b"{}")).await.unwrap();
             let _ = response.into_body().collect().await.unwrap();
             let seen = SEEN.lock().unwrap().last().cloned().unwrap();

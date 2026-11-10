@@ -1,6 +1,6 @@
 [package]
 name = "mcpg-plugin-http-ingress"
-version = "0.1.0-rc.2"
+version = "0.1.0-rc.4"
 edition = "2024"
 license = "Apache-2.0"
 description = "Serve HTTP on the connections an http-wire MCPG transport plugin accepts, and hand each request to the gateway"
