@@ -1,0 +1,23 @@
+[package]
+name = "mcpg-plugin-http-ingress"
+version = "0.1.0-rc.2"
+edition = "2024"
+license = "Apache-2.0"
+description = "Serve HTTP on the connections an http-wire MCPG transport plugin accepts, and hand each request to the gateway"
+
+[dependencies]
+mcpg-plugin-protocol = { git = "https://github.com/mcpg-dev/mcpg-plugin-protocol", tag = "v0.1.0-rc.8", version = "=0.1.0-rc.8" }
+mcpg-plugin-sdk = { git = "https://github.com/mcpg-dev/mcpg-plugin-sdk", tag = "v0.1.0-rc.13", version = "=0.1.0-rc.13" }
+bytes = "1"
+http = "1"
+http-body = "1"
+http-body-util = "0.1"
+hyper = { version = "1", features = ["server", "http1", "http2"] }
+hyper-util = { version = "0.1", features = ["server", "server-auto", "tokio"] }
+tokio = { version = "1", features = ["rt", "io-util"] }
+tracing = "0.1"
+
+[dev-dependencies]
+hyper = { version = "1", features = ["client", "http1"] }
+serde_json = "1.0"
+tokio = { version = "1", features = ["rt-multi-thread", "time", "macros", "sync", "io-util"] }
