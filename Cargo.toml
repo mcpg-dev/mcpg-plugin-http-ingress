@@ -1,13 +1,13 @@
 [package]
 name = "mcpg-plugin-http-ingress"
-version = "0.1.0-rc.4"
+version = "0.1.0-rc.6"
 edition = "2024"
 license = "Apache-2.0"
-description = "Serve HTTP on the connections an http-wire MCPG transport plugin accepts, and hand each request to the gateway"
+description = "Serve HTTP on the connections an MCPG transport plugin accepts, and hand each request to the gateway"
 
 [dependencies]
-mcpg-plugin-protocol = { git = "https://github.com/mcpg-dev/mcpg-plugin-protocol", tag = "v0.1.0-rc.8", version = "=0.1.0-rc.8" }
-mcpg-plugin-sdk = { git = "https://github.com/mcpg-dev/mcpg-plugin-sdk", tag = "v0.1.0-rc.13", version = "=0.1.0-rc.13" }
+mcpg-plugin-protocol = { git = "https://github.com/mcpg-dev/mcpg-plugin-protocol", tag = "v0.1.0-rc.10", version = "=0.1.0-rc.10" }
+mcpg-plugin-sdk = { git = "https://github.com/mcpg-dev/mcpg-plugin-sdk", tag = "v0.1.0-rc.15", version = "=0.1.0-rc.15" }
 bytes = "1"
 http = "1"
 http-body = "1"

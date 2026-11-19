@@ -1,4 +1,4 @@
-//! Serve HTTP on the connections an `http`-wire transport plugin accepts,
+//! Serve HTTP on the connections a transport plugin accepts,
 //! and hand each request to the gateway.
 //!
 //! The connection is any byte stream (an ngrok endpoint connection, a

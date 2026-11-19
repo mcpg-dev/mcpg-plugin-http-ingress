@@ -1,10 +1,10 @@
 # mcpg-plugin-http-ingress
 
-Serve HTTP on the connections that an `http`-wire MCPG transport plugin
-accepts, and hand each request to the gateway.
+Serve HTTP on the connections that an MCPG transport plugin accepts, and
+hand each request to the gateway.
 
-An `http`-wire transport (a tunnel, a relay, a socket the gateway does not
-bind) owns its connections. For each one it calls `serve_connection` with the
+A transport plugin (a tunnel, a relay, a socket the gateway does not bind)
+owns its connections. For each one it calls `serve_connection` with the
 byte stream and a `Connection`:
 
 - `remote_addr`: the client's address; the gateway's per-IP rate limits key
